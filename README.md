@@ -13,7 +13,6 @@ Musico is a simple and elegant web application that allows users to explore and 
 
 - **HTML**: For structuring the web pages.
 - **CSS**: For styling and making the application visually appealing.
-- **JavaScript (Optional)**: Can be added for additional interactivity.
 
 ## 📂 Project Structure
 
