@@ -1,0 +1,481 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,500,300,700);
+@font-face {
+  font-family: theme-font;
+  src: url(./Fonts/JosefinSans-VariableFont_wght.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: theme-font;
+}
+@font-face {
+  font-family: music-name;
+  src: url(./Fonts/Goldstone.otf);
+}
+:root {
+  --maincolor: linear-gradient(
+    to right,
+    #070001,
+    #44101a,
+    #810b25,
+    #c00026,
+    #ff0018
+  );
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0px;
+  background-image: var(--maincolor);
+}
+
+.head-container {
+  padding: 0 3rem 0 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo {
+  display: flex;
+  align-items: center;
+}
+span {
+  font-family: music-name;
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+}
+.navigation-bar {
+  display: flex;
+  gap: 1.5rem;
+  transition: 0.2s all 0s;
+}
+.navigation-bar a:hover {
+  transform: scale(1.1);
+  color: #0c0b0bdd;
+}
+.Sign-up a {
+  background-color: white;
+  color: #c00026;
+  padding: 6px;
+  border-radius: 1px;
+  font-weight: bold;
+  transition: 0.5s all 0s;
+}
+.Sign-up:hover #sign-up {
+  transform: scale(1.02);
+  box-shadow: rgb(57, 52, 52) 0px 1px 12px;
+}
+main {
+  display: flex;
+  flex-direction: column;
+}
+.hero-container {
+  height: 100vh;
+  padding-bottom: 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 7rem;
+}
+.left-box {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  animation: slideleft 0.5s ease-in;
+}
+#quote1 {
+  position: relative;
+  top: 2.5rem;
+}
+.left-box hr {
+  position: relative;
+  top: 3rem;
+}
+.title {
+  margin-top: 1.5rem;
+  font-size: 2rem;
+}
+.title h1 {
+  position: relative;
+  top: 50px;
+}
+.title p {
+  font-weight: bold;
+  font-size: 4rem;
+}
+.left-box span {
+  position: relative;
+  top: 10px;
+  left: 10px;
+  font-size: 4rem;
+}
+#quote2 {
+  margin-top: 1.5rem;
+  font-size: 1rem;
+  padding: 4px;
+  border-radius: 1px;
+  font-weight: bold;
+  border: solid white 1px;
+  color: #ffffff;
+  position: relative;
+  bottom: 3rem;
+}
+@keyframes slideleft {
+  0% {
+    opacity: 0;
+    transform: translatex(-70px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translatex(0);
+  }
+}
+.right-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.right-box img {
+  height: 25rem;
+  width: 25rem;
+  animation: rotate linear 5s infinite;
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.all-music {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.all-music h1 u {
+  color: white;
+}
+.container {
+  margin-top: 1rem;
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 300px));
+  gap: 10px;
+  justify-content: center;
+}
+.card {
+  margin: 1rem;
+  height: 400px;
+  width: 260px;
+  background-image: linear-gradient(
+    to right top,
+    #070001,
+    #2e0c11,
+    #510b17,
+    #740416,
+    #97000e
+  );
+  border-radius: 10px;
+  display: flex;
+  border: solid white 1px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0px;
+  animation: slideup 0.5s ease-in;
+  transition: 0.5s all 0s;
+}
+.card:hover {
+  transform: scale(1.02);
+  box-shadow: rgb(255, 255, 255) 0px 1px 8px;
+}
+@keyframes slideup {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.thumbnail img {
+  width: 100%;
+  height: 200px;
+  border: solid white 4px;
+  border-radius: 100rem;
+}
+.name p {
+  font-family: music-name;
+  text-align: center;
+  color: white;
+  font-size: 2.5rem;
+}
+.song {
+  padding: 10px;
+  width: 100%;
+  height: 12%;
+}
+.song audio {
+  width: 100%;
+  height: 100%;
+}
+.signup {
+  height: 100vh;
+  width: 300px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.signup h1 u {
+  color: white;
+}
+.signup-container {
+  margin: 1rem;
+
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+.p-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: end;
+  gap: 1rem;
+}
+.details {
+  gap: 1rem;
+}
+label {
+  font-size: 1.5rem;
+}
+input {
+  height: 2rem;
+  width: 20rem;
+}
+button {
+  height: 2rem;
+  width: 4rem;
+}
+
+* {
+  font-family: Open Sans;
+}
+
+section {
+  width: 100%;
+  display: inline-block;
+  background: #333;
+  height: 50vh;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.footer-distributed {
+  font-family: theme-font;
+
+  background: #33383b;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+  width: 100%;
+  text-align: left;
+  font: bold 16px sans-serif;
+  padding: 55px 50px;
+}
+
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right {
+  display: inline-block;
+  vertical-align: top;
+}
+
+/* Footer left */
+
+.footer-distributed .footer-left {
+  width: 40%;
+}
+
+/* The company logo */
+
+.footer-distributed h3 {
+  font-family: theme-font;
+  color: #ffffff;
+  font: normal 36px "Open Sans", cursive;
+  margin: 0;
+}
+
+.footer-distributed h3 span {
+  color: lightseagreen;
+}
+
+/* Footer links */
+
+.footer-distributed .footer-links {
+  font-family: theme-font;
+
+  color: #ffffff;
+  margin: 0px 0 12px;
+  padding: 0;
+}
+
+.footer-distributed .footer-links a {
+  display: inline-block;
+  line-height: 1.8;
+  font-weight: 400;
+  text-decoration: none;
+  color: inherit;
+}
+
+.footer-distributed .footer-company-name {
+  color: #222;
+  font-size: 14px;
+  font-weight: normal;
+  margin: 0;
+}
+
+/* Footer Center */
+
+.footer-distributed .footer-center {
+  width: 35%;
+}
+
+.footer-distributed .footer-center i {
+  background-color: #000000;
+  color: #ffffff;
+  font-size: 25px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 42px;
+  margin: 10px 15px;
+  vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope {
+  font-size: 17px;
+  line-height: 38px;
+}
+
+.footer-distributed .footer-center p {
+  display: inline-block;
+  color: #ffffff;
+  font-weight: 400;
+  vertical-align: middle;
+  margin: 0;
+}
+
+.footer-distributed .footer-center p span {
+  display: block;
+  font-weight: normal;
+  font-family: theme-font;
+  font-size: 1.5rem;
+  line-height: 2;
+}
+
+.footer-distributed .footer-center p a {
+  color: lightseagreen;
+  text-decoration: none;
+}
+
+.footer-distributed .footer-links a:before {
+  content: "|";
+  font-weight: 300;
+  font-size: 20px;
+  left: 0;
+  color: #fff;
+  display: inline-block;
+  padding-right: 5px;
+}
+
+.footer-distributed .footer-links .link-1:before {
+  content: none;
+}
+
+/* Footer Right */
+
+.footer-distributed .footer-right {
+  width: 20%;
+}
+
+.footer-distributed .footer-company-about {
+  line-height: 20px;
+  color: #92999f;
+  font-size: 13px;
+  font-weight: normal;
+  margin: 0;
+}
+
+.footer-distributed .footer-company-about span {
+  font-family: theme-font;
+  font-size: 1.5rem;
+  display: block;
+  color: #ffffff;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons {
+  margin-top: 25px;
+}
+
+.footer-distributed .footer-icons a {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  background-color: black;
+  border-radius: 2px;
+
+  font-size: 20px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 35px;
+
+  margin-right: 3px;
+  margin-bottom: 5px;
+}
+
+/* If you don't want the footer to be responsive, remove these media queries */
+
+@media (max-width: 880px) {
+  .footer-distributed {
+    font: bold 14px sans-serif;
+  }
+
+  .footer-distributed .footer-left,
+  .footer-distributed .footer-center,
+  .footer-distributed .footer-right {
+    display: block;
+    width: 100%;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
+  .footer-distributed .footer-center i {
+    margin-left: 0;
+  }
+}
